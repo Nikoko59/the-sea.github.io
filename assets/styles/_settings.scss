@@ -1,0 +1,94 @@
+
+// fonts 
+@font-face {
+    font-family: "Poppins";
+    src: url("/assets/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+    font-family: "Rubik";
+    src: url("/assets/fonts/Rubik-VariableFont_wght.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+// colors 
+$color1 : #2988BC ;
+$color2 : #2f496E; 
+$color3 : #f4eade; 
+$color4 : #ed8c72; 
+ $white : white ; 
+$black :black ; 
+
+// fonts
+$font1 : Poppins;
+$font2 : Rubik ; 
+
+// @mixin 
+@mixin top { 
+    text-transform: uppercase;
+    letter-spacing : 2px ; 
+    font-family: $font1;
+    
+}
+
+li { 
+    list-style-type : none ;
+}
+
+body { 
+    background: url("/assets/img/mer.avif") fixed center/cover ; 
+    min-height: 100vh;
+    text-align: center;
+    max-width: 1300px;
+    margin: 20px auto;
+       
+    &:before { 
+        content : " " ; 
+        position: absolute ; 
+        top: 0;
+        left: 0;
+        background: #070142;
+        height: 100%;
+        width: 100%;
+        animation : anim 1.2s ease-in forwards ; 
+        animation-delay: 0.20s;
+  
+          @keyframes anim { 
+            to { 
+                opacity : 0; 
+            }
+          }
+   
+
+    }
+
+
+
+}
+
+.btn{ 
+    background: $color1 ; 
+    color : $color4;
+    padding: 10px;
+    border-radius: 20px ; 
+    cursor : pointer ; 
+    width: 200px;
+    font-weight: 600; 
+    font-size :1rem ; 
+    border : none ; 
+    font-family: $font1;
+    transition : 0.3s ease; 
+  
+
+    &:hover { 
+        background: $color4;
+        color :$color1; 
+        transform : scale(1.05); 
+
+    }
+}
